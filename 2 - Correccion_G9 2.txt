@@ -1,0 +1,35 @@
+
+la operación de finalizarTarea funciona mal porque finaliza la actividad sin ser la última.
+
+Formato expandido CU:
+
+-          Gestionar Tareas Asignadas: El tipo cambia a concreto cuando se implementa.
+Precondición y postcondición incorrectas.
+El flujo de eventos es incorrecto, faltan interacciones.
+
+DSGS
+
+-          Consultar Tareas Asignadas: falta la operación 2 para consultar los detalles de la tarea y la operación 3 no requiere parámetros.
+
+DIOS e implementación:
+
+-          modificarTarea: ok
+
+-          eliminarTarea: ok
+
+Gestionar Tareas Asignadas
+
+-          consultarTareasAsignadas: ok
+
+-          finalizarTarea: mal diseñado e implementado el cambio de estado a tareaFinalizada. El dios no está bien en general
+
+vistas:
+
+-          en la vista de editarTarea se llama a consultarEquipos y no se debería llamar.
+         Además se hacen varias llamadas a consultarEquipos y consultarMiembrosDelEquipo y solo se debería hacer una a esta última operación.
+
+-          En la vista de TareasAsignadas pasa lo mismo, se hacen varias llamadas a consultarDetallesTarea y solo se debería hacer una.
+
+Contratos:
+
+-          Faltan los contratos del DSGS gestionar tareas asignadas
